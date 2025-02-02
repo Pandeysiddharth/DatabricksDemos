@@ -11,4 +11,21 @@ The multi-hop architecture for this dataset looks like this:
 
 <img width="966" alt="image" src="https://github.com/user-attachments/assets/bc96d77e-879b-4151-b2af-d232e6aaa038" />
 
+First, we receive data into the bronze table from a kafka streaming source.
+
+Post this, we refine the data further by moving it into different silver tables. Below are the various silver tables along with mini feature demos included while processing those tables:
+
+1. Orders table: First we start processing data into orders table, where we will also see concepts like quality enforcement and streaming deduplication.
+2. Books table: In this, we will explore the concept of slowly changing dimensions and create the books table.
+3. Current Books table: From books table, we will move on to creating Current_books table while showcasing the batch override feature.
+4. Customers: Next we will explore the feature of Change Data Capture (CDC) and create customers table.
+5. CDF: Following customers table, we will also explore CDF inbuilt feature which enables incremental changes into downstream tables.
+6. Customers Orders table: Next, we will explore streaming joints feature and create customers_orders table.
+7. Books Sales table: We will explore how stream static joins work in a datalake and create books_sales table.
+8. Finally, we create materialized views in the datalake in the form of gold tables countries_stats_vw and authors_stats
+
+
+
+
+
 
